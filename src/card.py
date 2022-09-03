@@ -49,7 +49,7 @@ class Card:
             self.name, self.expansion, self.rarity, self.condition, self.language, self.firstEd, self.amount, self.price)
 
     def __str__(self) -> str:
-        return "Name: {0}\nExpansion: {1}\nRarity: {2}\nCondition: {3}\nLanguage: {4}\nFirst Ed: {5}\nAmount: {6}\nPrice{7}\n".format(
+        return "Name: {0}\nExpansion: {1}\nRarity: {2}\nCondition: {3}\nLanguage: {4}\nFirst Ed: {5}\nAmount: {6}\nPrice: {7}\n".format(
             self.name, self.expansion, self.rarity, self.condition, self.language, self.firstEd, self.amount, self.price)
 
     def getName(self) -> str:
