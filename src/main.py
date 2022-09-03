@@ -1,10 +1,7 @@
-from library import Library
+from libraryController import run
 
 def main():
-    lib = Library()
-    lib.loadLibrary()
-    # lib.printLibrary()
-    lib.saveLibrary()
+    run()
 
 if __name__ == '__main__':
     main()

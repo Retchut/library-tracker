@@ -22,9 +22,9 @@ class Library:
         try:
             libraryFile = open(LIBRARY_FILE_NAME, "r")
         except FileNotFoundError:
-            print("No library file found. Launching with an empty library.")
+            print("No library file found. Launching with an empty library.\n")
         else:
-            print("A library.txt was detected and will be loaded.");
+            print("A library.txt was detected and will be loaded.\n");
             success = True;
             line = 1
             for entry in libraryFile:
