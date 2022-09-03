@@ -1,14 +1,15 @@
-def getMenuInput(menuTexts : list) -> int:
+def getMenuInput(menuOptions : list, menuTexts : list) -> int:
+    errorMsg = "You must input a valid integer."
+
     for optionText in menuTexts:
         print(optionText)
-    
-    menuOptions = [*range(len(menuTexts))]
+
     while(True):
         try:
             inputOption = int(input("Please input an option: "))
         except ValueError:
-            print("You must input a valid integer.")
+            print(errorMsg)
         else:
             if(inputOption in menuOptions):
                 return inputOption
-            print("That option does not exist.")
+            print(errorMsg)

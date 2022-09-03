@@ -17,14 +17,17 @@ class Library:
 
     def getCollection(self) -> list:
         return self.collection
+        
+    def isEmpty(self) -> bool:
+        return not len(self.collection)
     
     def loadLibrary(self) -> None:
         try:
             libraryFile = open(LIBRARY_FILE_NAME, "r")
         except FileNotFoundError:
-            print("No library file found. Launching with an empty library.\n")
+            print("No library file found. Launching with an empty library.")
         else:
-            print("A library.txt was detected and will be loaded.\n");
+            print("A library.txt was detected and will be loaded.");
             success = True;
             line = 1
             for entry in libraryFile:
@@ -72,9 +75,9 @@ class Library:
     def removeCard(self) -> int:
         pass
 
-    def printLibrary(self) -> None:
-        for card in self.collection:
-            print(card)
+    def printLibrary(self, start, end) -> None:
+        for number in range(start, end):
+            self.collection[number].printSuccint()
 
     def printSubCollection(self) -> None:
         pass
