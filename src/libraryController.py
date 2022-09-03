@@ -49,14 +49,30 @@ def viewLibraryMenu(lib : Library) -> None:
         "4 - Price (Desc)",
         "5 - Expansion (Asc)",
         "6 - Expansion (Desc)",
-        "7 - Rarity"
+        "7 - Rarity",
+        "0 - Cancel"
     ]
-    menuOptions = [*range(1,len(options) + 1)]
+    menuOptions = [*range(len(options))]
 
     print("\nWhich field do you want to sort by?")
     selectedOption = getMenuInput(menuOptions, options)
     # depending on the selected option, we'll sort the library then print a subsection of the library
-    # lib.sortLibrary()
+    if(selectedOption == 0):
+        return
+    elif(selectedOption == 1):
+        lib.sortLibrary()
+    elif(selectedOption == 2):
+        lib.sortLibrary()
+    elif(selectedOption == 3):
+        lib.sortLibrary()
+    elif(selectedOption == 4):
+        lib.sortLibrary()
+    elif(selectedOption == 5):
+        lib.sortLibrary()
+    elif(selectedOption == 6):
+        lib.sortLibrary()
+    elif(selectedOption == 7):
+        lib.sortLibrary()
     libraryScroller(lib)
 
     
@@ -85,18 +101,18 @@ def libraryScroller(lib : Library) -> None:
         printPage(lib, page, lastPage, start, start + increment)
 
         #
-        option = getMenuInput(menuOptions, options)
-        if(option == 1):
+        selectedOption = getMenuInput(menuOptions, options)
+        if(selectedOption == 1):
             if (page == 0):
                 print("Can't go back.")
             else:
                 page -= 1
-        elif(option == 2):
+        elif(selectedOption == 2):
             if (page == lastPage):
                 print("Can't go forward.")
             else:
                 page += 1
-        elif(option == 3):
+        elif(selectedOption == 3):
             break
 
 def printPage(lib : Library, currentPage : int, lastPage : int, start : int, end : int) -> None:
