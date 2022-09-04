@@ -1,6 +1,8 @@
-from library import Library
-from utils import getMenuInput
 from math import floor
+import traceback
+
+from library import Library
+from utils import getMenuInput, getQueriedInput
 
 
 def run() -> None:
@@ -22,7 +24,7 @@ def libraryLoop(lib) -> None:
     menuOptions = [*range(len(options))]
 
     while(True):
-        print("\nWhich action would you like to perform?")
+        print("Which action would you like to perform?")
         selectedOption = getMenuInput(menuOptions, options)
         if(selectedOption == 1):
             viewLibraryMenu(lib)
@@ -59,7 +61,7 @@ def viewLibraryMenu(lib : Library) -> None:
     sortByExpansion = lambda card : card.expansion
     sortByRarity = lambda card : card.rarity
 
-    print("\nWhich field do you want to sort by?")
+    print("Which field do you want to sort by?")
     selectedOption = getMenuInput(menuOptions, options)
     # depending on the selected option, we'll sort the library then print a subsection of the library
     if(selectedOption == 0):
@@ -128,14 +130,70 @@ def printPage(lib : Library, currentPage : int, lastPage : int, start : int, end
         "    Rarity    ",
         " Card Name "
     ]
-    print("\n{0}|{1}|{2}|{3}|{4}".format(*header))
+    print("{0}|{1}|{2}|{3}|{4}".format(*header))
     lib.printLibrary(start, end)
     print()
     print((currentPage+1), "/", (lastPage + 1))
 
 
 def addCardMenu(lib : Library) -> None:
-    pass
+    queries = {
+        'name' : "Please input the card's name: ",
+        'version' : "If this card has any alternate versions in this set, please input that version's number. Print 0 if it has none: ",
+        'rarity' : "Please input the rarity: ",
+        'expansion' : "Please input the expansion: ",
+        'condition' : "Please input the condition (M/NM/EX/GD/LP/PL/P): ",
+        'language' : "Please input the language: ",
+        'edition' : "Is the card 1st ed? (y/n): ",
+        'amount' : "Please input the number of copies you have: "
+    }
+    validRarities = []
+    validExpansion = []
+    validConditions = ["M", "NM", "EX", "GD", "LP", "PL", "P"]
+    validLanguages = [ "English", "French", "German", "Spanish", "Italian", "Portuguese" ]
+    validEditions = ['y', 'n']
+
+    result = getQueriedInput(queries)
+    # perform checks on the input
+    try:
+        name = result["name"]
+
+        check = "version"
+        version = result["version"]
+        if int(version) < 0:
+            raise ValueError
+
+        check = "rarity"
+        rarity = result["rarity"]
+        # TODO: check if rarity exists
+
+        check = "expansion"
+        expansion = result["expansion"]
+        # TODO: check if expansion is in expansion map
+
+        check = "condition"
+        condition = result["condition"].capitalize()
+        if(condition not in validConditions):
+            raise ValueError
+
+        check = "language"
+        language = result["language"].capitalize()
+        if language not in validLanguages:
+            raise ValueError
+
+        check = "edition"
+        if(result['edition'] not in validEditions):
+            raise ValueError
+        firstEd = True if result["edition"] == 'y' else False
+
+        check = "amount"
+        amount = int(result["amount"])
+
+        price = 0.0 # TODO: fetch from crawler later
+    except ValueError:
+        print("Error parsing {0}. Please input a valid {0}.\n".format(check))
+    else:
+        lib.addCard([name, version, rarity, expansion, condition, language, firstEd, amount, price])
 
 def accessCardMenu(lib : Library) -> None:
     pass
