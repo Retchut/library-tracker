@@ -1,5 +1,6 @@
 from enum import Enum
 from os import get_terminal_size
+from xml.etree.ElementTree import QName
 
 class Condition(Enum):
     M = "Mint"
@@ -46,15 +47,35 @@ class Card:
     
     def __repr__(self) -> str:
         return "Card({0},{1},{2},{3},{4},{5},{6},{7})".format(
-            self.name, self.expansion, self.rarity, self.condition, self.language, self.firstEd, self.amount, self.price)
+            self.name,
+            self.expansion,
+            self.rarity,
+            self.condition,
+            self.language,
+            self.firstEd,
+            self.amount,
+            self.price
+        )
 
     def __str__(self) -> str:
         return "Name: {0}\nExpansion: {1}\nRarity: {2}\nCondition: {3}\nLanguage: {4}\nFirst Ed: {5}\nAmount: {6}\nPrice: {7}\n".format(
-            self.name, self.expansion, self.rarity, self.condition, self.language, self.firstEd, self.amount, self.price)
+            self.name,
+            self.expansion,
+            self.rarity,
+            self.condition,
+            self.language,
+            "Yes" if self.firstEd else "No",
+            self.amount,
+            self.price
+        )
 
     def printSuccint(self) -> None:
         print("{0}\t|{1}\t|{2}\t|{3}\t|{4}".format(
-            self.amount, self.price, self.expansion, self.rarity, self.name
+            self.amount,
+            self.price,
+            self.expansion,
+            self.rarity,
+            self.name
         ))
 
     def getName(self) -> str:
