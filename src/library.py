@@ -1,5 +1,6 @@
 from dbm.ndbm import library
 import traceback
+from typing import Callable
 from card import Card
 LIBRARY_FILE_NAME = "library.txt"
 
@@ -69,6 +70,9 @@ class Library:
                 libraryFile.write(entryString)
             libraryFile.close()
 
+    def sortLibrary(self, reverse : bool, key : Callable) -> None:
+        self.collection.sort(reverse=reverse, key=key)
+
     def addCard(self) -> int:
         pass
 
@@ -83,7 +87,4 @@ class Library:
         pass
     
     def accessCard(self) -> int:
-        pass
-
-    def sortLibrary(self, choice : int):
         pass

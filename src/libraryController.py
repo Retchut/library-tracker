@@ -54,25 +54,30 @@ def viewLibraryMenu(lib : Library) -> None:
     ]
     menuOptions = [*range(len(options))]
 
+    sortByName = lambda card : card.name
+    sortByPrice = lambda card : card.price
+    sortByExpansion = lambda card : card.expansion
+    sortByRarity = lambda card : card.rarity
+
     print("\nWhich field do you want to sort by?")
     selectedOption = getMenuInput(menuOptions, options)
     # depending on the selected option, we'll sort the library then print a subsection of the library
     if(selectedOption == 0):
         return
     elif(selectedOption == 1):
-        lib.sortLibrary()
+        lib.sortLibrary(False, sortByName)
     elif(selectedOption == 2):
-        lib.sortLibrary()
+        lib.sortLibrary(True, sortByName)
     elif(selectedOption == 3):
-        lib.sortLibrary()
+        lib.sortLibrary(False, sortByPrice)
     elif(selectedOption == 4):
-        lib.sortLibrary()
+        lib.sortLibrary(True, sortByPrice)
     elif(selectedOption == 5):
-        lib.sortLibrary()
+        lib.sortLibrary(False, sortByExpansion)
     elif(selectedOption == 6):
-        lib.sortLibrary()
+        lib.sortLibrary(True, sortByExpansion)
     elif(selectedOption == 7):
-        lib.sortLibrary()
+        lib.sortLibrary(False, sortByRarity)
     libraryScroller(lib)
 
     
