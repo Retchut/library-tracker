@@ -128,7 +128,7 @@ def printPage(lib : Library, currentPage : int, lastPage : int, start : int, end
         "    Rarity    ",
         " Card Name "
     ]
-    print("{0}|{1}|{2}|{3}|{4}".format(*header))
+    print("\n{0}|{1}|{2}|{3}|{4}".format(*header))
     lib.printLibrary(start, end)
     print()
     print((currentPage+1), "/", (lastPage + 1))
