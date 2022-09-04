@@ -23,3 +23,11 @@ def getMenuInput(menuOptions : list, menuTexts : list) -> int:
                 clearConsole()
                 return inputOption
             print(errorMsg)
+
+def getQueriedInput(queries : dict) -> dict:
+    queryResult = dict()
+    for varName in queries:
+        queryInput = input(queries[varName])
+        queryResult[varName] = queryInput
+    print() # purely for aesthetics
+    return queryResult
