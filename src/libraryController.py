@@ -196,7 +196,22 @@ def addCardMenu(lib : Library) -> None:
         lib.addCard([name, version, rarity, expansion, condition, language, firstEd, amount, price])
 
 def accessCardMenu(lib : Library) -> None:
-    pass
+    if(lib.isEmpty()):
+        print("The library is empty.")
+        return
+    
+    card = input("Please input the name of the card you want to access: ")
+    
+    # int pos = Algorithms.binarySearch(this.collection, 0, this.collection.size() - 1, name);
+
+    # if(pos == -1){
+        # //TODO: Clear console
+        # System.out.println("That card is not on your library.");
+        # return 1;
+    # }
+    # else{
+        # return this.collection.get(pos).modifyCard(scanner);
+# }
 
 def lookUpPriceMenu() -> None:
     pass
