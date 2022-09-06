@@ -33,7 +33,7 @@ def libraryLoop(lib) -> None:
         elif(selectedOption == 3):
             accessCardMenu(lib)
         elif(selectedOption == 4):
-            lookUpPriceMenu() # isto vai sair daqui wtf is this name
+            lookUpPriceMenu()
         elif(selectedOption == 5):
             updatePrices(lib)
         elif(selectedOption == 0):
@@ -196,11 +196,12 @@ def addCardMenu(lib : Library) -> None:
         lib.addCard([name, version, rarity, expansion, condition, language, firstEd, amount, price])
 
 def accessCardMenu(lib : Library) -> None:
-    if(lib.isEmpty()):
-        print("The library is empty.")
-        return
+    print("Not yet implemented")
+    # if(lib.isEmpty()):
+    #     print("The library is empty.")
+    #     return
     
-    card = input("Please input the name of the card you want to access: ")
+    # card = input("Please input the name of the card you want to access: ")
     
     # int pos = Algorithms.binarySearch(this.collection, 0, this.collection.size() - 1, name);
 
@@ -214,7 +215,7 @@ def accessCardMenu(lib : Library) -> None:
 # }
 
 def lookUpPriceMenu() -> None:
-    pass
+    print("Not yet implemented")
 
 def updatePrices(lib : Library) -> None:
-    pass
+    print("Not yet implemented")

@@ -32,9 +32,9 @@ def getQueriedInput(queries : dict) -> dict:
     print() # purely for aesthetics
     return queryResult
 
-def binarySearch(container : list, start, end, name):
-    if start == end:
-        return start if (container[start].name == name) else -1
+# def binarySearch(container : list, start, end, name):
+#     if start == end:
+#         return start if (container[start].name == name) else -1
     
 
         #array with 1 item
