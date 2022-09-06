@@ -28,9 +28,9 @@ class Library:
         except FileNotFoundError:
             print("No library file found. Launching with an empty library.")
         else:
-            print("A library.txt was detected and will be loaded.");
-            success = True;
-            line = 1
+            print("A library.txt was detected and will be loaded.")
+            success = True
+            lineNum = 1
             for entry in libraryFile:
                 # split entries by token, and remove line terminator from the entry
                 cardData = entry.split("|")
@@ -48,10 +48,10 @@ class Library:
                         price=float(cardData[8])
                     ))
                 except ValueError:
-                    print("Error loading line number", line, "of the library file.")
+                    print("Error loading line number", lineNum, "of the library file.")
                     print(traceback.format_exc())
                     exit(1)
-                line+=1
+                lineNum+=1
         libraryFile.close()
 
     def saveLibrary(self) -> None:

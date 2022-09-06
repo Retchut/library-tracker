@@ -3,13 +3,15 @@ import traceback
 
 from library import Library
 from utils import getMenuInput, getQueriedInput
+from expansions import expansions, loadExpansions
 
+expansionsLoaded = False
 
 def run() -> None:
     lib = Library()
     lib.loadLibrary()
+    expansionsLoaded = loadExpansions()
     libraryLoop(lib)
-    # lib.printLibrary()
     lib.saveLibrary()
 
 def libraryLoop(lib) -> None:
