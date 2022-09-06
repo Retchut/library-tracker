@@ -73,9 +73,9 @@ class Library:
     def sortLibrary(self, reverse : bool, key : Callable) -> None:
         self.collection.sort(reverse=reverse, key=key)
 
-    def printLibrary(self, start, end) -> None:
+    def printLibrary(self, start, end, headerLengths) -> None:
         for number in range(start, end):
-            self.collection[number].printSuccint()
+            self.collection[number].printSuccint(headerLengths)
 
     def addCard(self, cardData : list) -> int:
         newCard = Card(*cardData)

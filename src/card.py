@@ -69,13 +69,13 @@ class Card:
             self.price
         )
 
-    def printSuccint(self) -> None:
-        print("{0}\t|{1}\t|{2}\t|{3}\t|{4}".format(
-            self.amount,
-            self.price,
-            self.expansion,
-            self.rarity,
-            self.name
+    def printSuccint(self, headerLengths) -> None:
+        print("{0}|{1}|{2}|{3}|{4}".format(
+            " " + str(self.amount).ljust(headerLengths[0]-1),
+            " " + str(self.price).ljust(headerLengths[1]-1),
+            " " + str(self.expansion).ljust(headerLengths[2]-1),
+            " " + str(self.rarity).ljust(headerLengths[3]-1),
+            " " + str(self.name).ljust(headerLengths[4-1])
         ))
 
     def getName(self) -> str:

@@ -125,13 +125,14 @@ def libraryScroller(lib : Library) -> None:
 def printPage(lib : Library, currentPage : int, lastPage : int, start : int, end : int) -> None:
     header = [
         " Amount ",
-        "  Price  ",
+        " Price   ",
         " Expansion ",
-        "    Rarity    ",
+        " Rarity       ",
         " Card Name "
     ]
+    headerLengths = [len(x) for x in header]
     print("{0}|{1}|{2}|{3}|{4}".format(*header))
-    lib.printLibrary(start, end)
+    lib.printLibrary(start, end, headerLengths)
     print()
     print((currentPage+1), "/", (lastPage + 1))
 
