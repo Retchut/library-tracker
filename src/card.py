@@ -81,7 +81,7 @@ class Card:
     def getName(self) -> str:
         return self.name
 
-    def getVersion(self) -> str:
+    def getVersion(self) -> int:
         return self.version
 
     def getRarity(self) -> int:
