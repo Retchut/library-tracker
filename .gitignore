@@ -1,4 +1,4 @@
 .vscode
-src/__pycache__
+**/__pycache__
 *.txt
-!*/expansions.txt
+!src/expansions.txt

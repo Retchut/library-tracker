@@ -1,7 +1,7 @@
 import traceback
 from typing import Callable
-
-from card import Card
+import pathlib
+from models.card import Card
 LIBRARY_FILE_NAME = "library.txt"
 
 class Library:
@@ -52,7 +52,7 @@ class Library:
                     print(traceback.format_exc())
                     exit(1)
                 lineNum+=1
-        libraryFile.close()
+            libraryFile.close()
 
     def saveLibrary(self) -> None:
         with open(LIBRARY_FILE_NAME, "w+") as libraryFile:

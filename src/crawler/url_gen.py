@@ -1,5 +1,5 @@
-from card import Card
-from expansions import expansions
+from crawler.expansions import expansions
+from models.card import Card
 
 def buildURLs(card : Card) -> list:
     possibleURLs  = []

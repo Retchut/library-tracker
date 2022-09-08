@@ -3,9 +3,9 @@ sys.path.insert(1, '../src/')
 
 import unittest
 
-from card import Card
-from expansions import loadExpansions
-from url_gen import buildURLs
+from models.card import Card
+from crawler.expansions import loadExpansions
+from crawler.url_gen import buildURLs
 
 # condition = "NM"
 # language = "English"

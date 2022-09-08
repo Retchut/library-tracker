@@ -1,10 +1,10 @@
 from math import floor
 import traceback
 
-from library import Library
+from models.library import Library
 from utils import getMenuInput, getQueriedInput
-from expansions import loadExpansions
-from url_gen import buildURLs
+from crawler.expansions import loadExpansions
+from crawler.url_gen import buildURLs
 
 expansionsLoaded = False
 
@@ -225,3 +225,6 @@ def updatePrices(lib : Library) -> None:
     # print("Not yet implemented")
     for card in lib.getCollection():
         print(buildURLs(card))
+
+if __name__ == '__main__':
+    run()

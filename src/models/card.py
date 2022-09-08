@@ -1,6 +1,4 @@
 from enum import Enum
-from os import get_terminal_size
-from xml.etree.ElementTree import QName
 
 class Condition(Enum):
     M = "Mint"
