@@ -1,15 +1,18 @@
 from math import floor
 import traceback
 
-from library import Library
+from models.library import Library
 from utils import getMenuInput, getQueriedInput
+from crawler.expansions import loadExpansions
+from crawler.url_gen import buildURLs
 
+expansionsLoaded = False
 
 def run() -> None:
     lib = Library()
     lib.loadLibrary()
+    expansionsLoaded = loadExpansions()
     libraryLoop(lib)
-    # lib.printLibrary()
     lib.saveLibrary()
 
 def libraryLoop(lib) -> None:
@@ -219,4 +222,9 @@ def lookUpPriceMenu() -> None:
     print("Not yet implemented")
 
 def updatePrices(lib : Library) -> None:
-    print("Not yet implemented")
+    # print("Not yet implemented")
+    for card in lib.getCollection():
+        print(buildURLs(card))
+
+if __name__ == '__main__':
+    run()
