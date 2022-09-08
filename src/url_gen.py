@@ -36,16 +36,31 @@ def urlify(string : str):
     #Characters cardmarket seems to ignore, when creating the url of cards
     ignoreChars = [ '"', '?', '!', ',', '@', '/', '&', '=', ':', '(', ')', '.']
 
-    # TODO: check this
-    for i in range(len(string)):
-        current = string[i]
-        if current not in ignoreChars:
+    urlString = ""
+
+    for c in string:
+        if c in ignoreChars:
             continue
-        elif (current == '-' or current == ' '):
-            #replace space with '-', or write '-', if one hasn't been already written
-            if(string[:-1] != '-'):
-                string += '-'
+        elif(c == '-' or c == ' '):
+            # write '-' only if the previous character written was not a '-'
+            if(urlString[-1] != '-'):
+                urlString += '-'
         else:
-            #add normal char to url
-            string += current
-    return string
+            # preserve char
+            urlString += c
+
+            
+
+
+    # for i in range(len(string)):
+    #     current = string[i]
+    #     if current in ignoreChars:
+    #         continue
+    #     elif (current == '-' or current == ' '):
+    #         #replace space with '-', or write '-', if one hasn't been already written
+    #         if(urlString[:-1] != '-'):
+    #             urlString += '-'
+    #     else:
+    #         #add normal char to url
+    #         urlString += current
+    return urlString
