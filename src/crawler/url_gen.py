@@ -41,7 +41,7 @@ def urlify(string : str):
     for c in string:
         if c in ignoreChars:
             continue
-        elif(c == '-' or c == ' '):
+        elif(c == '-' or c == ' ' or c == '\''):
             # write '-' only if the previous character written was not a '-'
             if(urlString[-1] != '-'):
                 urlString += '-'
