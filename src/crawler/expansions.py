@@ -1,7 +1,7 @@
 expansions = {}
 EXPANSIONS_FILE_NAME = "expansions.txt"
 
-def loadExpansions() -> bool:
+def loadExpansions() -> None:
     try:
         expansionsFile = open(EXPANSIONS_FILE_NAME, "r")
     except FileNotFoundError:

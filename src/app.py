@@ -5,13 +5,12 @@ from models.library import Library
 from utils import getMenuInput, getQueriedInput
 from crawler.expansions import loadExpansions
 from crawler.url_gen import buildURLs
-
-expansionsLoaded = False
+from crawler.crawl import getPrices
 
 def run() -> None:
     lib = Library()
     lib.loadLibrary()
-    expansionsLoaded = loadExpansions()
+    loadExpansions()
     libraryLoop(lib)
     lib.saveLibrary()
 
@@ -40,7 +39,7 @@ def libraryLoop(lib) -> None:
         elif(selectedOption == 5):
             updatePrices(lib)
         elif(selectedOption == 0):
-            close = True
+            return
 
 def viewLibraryMenu(lib : Library) -> None:
     if(lib.isEmpty()):
@@ -201,30 +200,32 @@ def addCardMenu(lib : Library) -> None:
 
 def accessCardMenu(lib : Library) -> None:
     print("Not yet implemented")
-    # if(lib.isEmpty()):
-    #     print("The library is empty.")
-    #     return
-    
-    # card = input("Please input the name of the card you want to access: ")
-    
-    # int pos = Algorithms.binarySearch(this.collection, 0, this.collection.size() - 1, name);
-
-    # if(pos == -1){
-        # //TODO: Clear console
-        # System.out.println("That card is not on your library.");
-        # return 1;
-    # }
-    # else{
-        # return this.collection.get(pos).modifyCard(scanner);
-# }
 
 def lookUpPriceMenu() -> None:
     print("Not yet implemented")
 
 def updatePrices(lib : Library) -> None:
-    # print("Not yet implemented")
+    # TODO: Find a way to update all cards with the same name and expansion at once
+    # TODO: Also save prices besides the fromPrice
+    # TODO: Add remaining expansions to the expansions file
+    # TODO: Fix miscelaneous issues with the crawler
+    # TODO: Rewrite crawler in scrapy because it is faster and allows for more control when crawling
+    lib.sortLibrary(False, lambda card : card.name)
+    checkedCardNames = []
+    prevPrice = 0.0
     for card in lib.getCollection():
-        print(buildURLs(card))
+        # multiple cards with the same name
+        if card.getName() in checkedCardNames:
+            card.updatePrice(prevPrice)
+            continue
+        prices = getPrices(buildURLs(card))
+        if prices == {}:
+            print("Error fetching {0}({1})'s price. No changes were made...".format(card.getName(), card.getExpansion()))
+            continue
+        card.updatePrice(prices['fromPrice'])
+        checkedCardNames.append(card.getName())
+        prevPrice = prices['fromPrice']
+        print("Updated {0}({1})'s price successfully.".format(card.getName(), card.getExpansion()))
 
 if __name__ == '__main__':
     run()

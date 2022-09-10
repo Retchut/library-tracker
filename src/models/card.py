@@ -103,5 +103,8 @@ class Card:
     def getPrice(self) -> float:
         return self.price
 
-    def changeAmount(self, number:int) -> int:
+    def updatePrice(self, newPrice) -> None:
+        self.price = newPrice
+
+    def changeAmount(self, number:int) -> None:
         self.amount += number
