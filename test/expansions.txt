@@ -1,0 +1,471 @@
+//Booster Packs
+//Taken from https://yugioh.fandom.com/wiki/Booster_Pack
+//International (Series 1, 2, 3 equivalent)
+LOB,Legend-of-Blue-Eyes-White-Dragon
+MRD,Metal-Raiders
+SRL,Spell-Ruler
+PSV,Pharaohs-Servant
+LON,Labyrinth-of-Nightmare
+LOD,Legacy-of-Darkness
+PGD,Pharaonic-Guardian
+MFC,Magicians-Force
+DCR,Dark-Crisis
+IOC,Invasion-of-Chaos
+AST,Ancient-Sanctuary
+//
+//Series 4
+SOD,Soul-of-the-Duelist
+RSD,Rise-of-Destiny
+FET,Flaming-Eternity
+TLM,The-Lost-Millennium
+CRV,Cybernetic-Revolution
+EEN,Elemental-Energy
+SOI,Shadow-of-Infinity
+EOJ,Enemy-of-Justice
+//
+//Series 5
+POTD,Power-of-the-Duelist
+CDIP,Cyberdark-Impact
+STON,Strike-of-Neos
+FOTB,Force-of-the-Breaker
+TAEV,Tactical-Evolution
+GLAS,Gladiators-Assault
+PTDN,Phantom-Darkness
+LODT,Light-of-Destruction
+//
+//Series 6
+TDGS,The-Duelist-Genesis
+CSOC,Crossroads-of-Chaos
+CRMS,Crimson-Crisis
+RGBT,Raging-Battle
+ANPR,Ancient-Prophecy
+SOVR,Stardust-Overdrive
+ABPF,Absolute-Powerforce
+TSHD,The-Shining-Darkness
+//
+//Series 7
+DREV,Duelist-Revolution
+STBL,Starstrike-Blast
+STOR,Storm-of-Ragnarok
+EXVC,Extreme-Victory
+GENF,Generation-Force
+PHSW,Photon-Shockwave
+ORCS,Order-of-Chaos
+GAOV,Galactic-Overlord
+//
+//Series 8
+REDU,Return-of-the-Duelist
+ABYR,Abyss-Rising
+CBLZ,Cosmo-Blazer
+LTGY,Lord-of-the-Tachyon-Galaxy
+JOTL,Judgment-of-the-Light
+SHSP,Shadow-Specters
+LVAL,Legacy-of-the-Valiant
+PRIO,Primal-Origin
+//
+//Series 9
+DUEA,Duelist-Alliance
+NECH,The-New-Challengers
+SECE,Secrets-of-Eternity
+CROS,Crossed-Souls
+CORE,Clash-of-Rebellions
+DOCS,Dimension-of-Chaos
+BOSH,Breakers-of-Shadow
+SHVI,Shining-Victories
+TDIL,The-Dark-Illusion
+INOV,Invasion-Vengeance
+RATE,Raging-Tempest
+MACR,Maximum-Crisis
+//
+//Series 10
+COTD,Code-of-the-Duelist
+CIBR,Circuit-Break
+EXFO,Extreme-Force
+FLOD,Flames-of-Destruction
+CYHO,Cybernetic-Horizon
+SOFU,Soul-Fusion
+SAST,Savage-Strike
+DANE,Dark-Neostorm
+RIRA,Rising-Rampage
+CHIM,Chaos-Impact
+IGAS,Ignition-Assault
+ETCO,Eternity-Code
+//Series 11
+ROTD,Rise-of-the-Duelist
+PHRA,Phantom-Rage
+BLVO,Blazing-Vortex
+LIOV,Lightning-Overdrive
+DAMA,Dawn-of-Majesty
+BODE,Burst-of-Destiny
+BACH,Battle-of-Chaos
+DIFO,Dimension-Force
+POTE,Power-of-the-Elements
+DABL,Darkwing-Blast
+//
+//Starter Decks
+//Taken from https://yugioh.fandom.com/wiki/Starter_Deck
+SDY,Starter-Deck-Yugi
+SDK,Starter-Deck-Kaiba
+SDJ,Starter-Deck-Joey
+SDP,Starter-Deck-Pegasus
+SYE,Starter-Deck-Yugi-Evolution
+SKE,Starter-Deck-Kaiba-Evolution
+YSD,Starter-Deck-GX-2006
+YSDJ,Starter-Deck-Jaden-Yuki
+YSDS,Starter-Deck-Syrus-Truesdale
+YSD2,Starter-Deck-2007
+5DS1,5D-s-Starter-Deck-2008
+5DS2,5D-s-Starter-Deck-2009
+5DS3,Starter-Deck-Duelist-Toolbox
+YS11,Starter-Deck-Dawn-of-the-Xyz
+YS12,Starter-Deck-Xyz-Symphony
+YS13,Super-Starter-V-for-Victory
+YSYR,Starter-Deck-Yugi-Reloaded
+YSKR,Starter-Deck-Kaiba-Reloaded
+YS14,Super-Starter-SpaceTime-Showdown
+YS15,2Player-Starter-Deck-Yuya-Declan
+YS16,Starter-Deck-Yuya
+YS17,Starter-Deck-Link-Strike
+YS18,Starter-Deck-Codebreaker
+EGS1,Egyptian-God-Deck-Slifer-the-Sky-Dragon
+EGO1,Egyptian-God-Deck-Obelisk-the-Tormentor
+SS01,Speed-Duel-Starter-Decks-Destiny-Masters
+SS02,Speed-Duel-Starter-Decks-Duelists-of-Tomorrow
+SS03,Speed-Duel-Starter-Deck-Ultimate-Predators
+SS04,Speed-Duel-Starter-Decks-Match-of-the-Millennium
+SS05,Speed-Duel-Starter-Decks-Twisted-Nightmares
+//
+//Structure Decks
+SD1,Structure-Deck-Dragons-Roar
+SD2,Structure-Deck-Zombie-Madness
+SD3,Structure-Deck-Blaze-of-Destruction
+SD4,Structure-Deck-Fury-From-The-Deep
+SD5,Structure-Deck-Warriors-Triumph
+SD6,Structure-Deck-Spellcasters-Judgment
+SD7,Structure-Deck-Invincible-Fortress
+SD8,Structure-Deck-Lord-of-the-Storm
+SD9,Structure-Deck-Dinosaurs-Rage
+SD10,Structure-Deck-Machine-ReVolt
+SDRL,Structure-Deck-Rise-of-the-Dragon-Lords
+SDDE,Structure-Deck-The-Dark-Emperor
+SDDZ,Structure-Deck-Zombie-World
+SDSC,Structure-Deck-Spellcasters-Command
+SDWS,Structure-Deck-Warriors-Strike
+SDMM,Structure-Deck-Machina-Mayhem
+SDMA,Structure-Deck-Marik
+SDDL,Structure-Deck-Dragunity-Legion
+SDLS,Structure-Deck-Lost-Sanctuary
+SDGU,Structure-Deck-Gates-of-the-Underworld
+SDDC,Structure-Deck-Dragons-Collide
+SDWA,Structure-Deck-Samurai-Warlords
+SDRE,Structure-Deck-Realm-of-the-Sea-Emperor
+SDOK,Structure-Deck-Onslaught-of-the-Fire-Kings
+SDBE,Structure-Deck-Saga-of-BlueEyes-White-Dragon
+SDCR,Structure-Deck-Cyber-Dragon-Revolution
+SDLI,Structure-Deck-Realm-of-Light
+SDGR,Structure-Deck-Geargia-Rampage
+SDHS,Structure-Deck-HERO-Strike
+SDSE,Structure-Deck-Synchron-Extreme
+SDMP,Structure-Deck-Master-of-Pendulum
+SR01,Structure-Deck-Emperor-of-Darkness
+SR02,Structure-Deck-Rise-of-the-True-Dragons
+SDYM,Structure-Deck-Yugi-Muto
+SDKS,Structure-Deck-Seto-Kaiba
+SDPD,Structure-Deck-Pendulum-Domination
+SR03,Structure-Deck-Machine-Reactor
+SR04,Structure-Deck-Dinosmashers-Fury
+SDCL,Structure-Deck-Cyberse-Link
+SR05,Structure-Deck-Wave-of-Light
+SR06,Structure-Deck-Lair-of-Darkness
+SDPL,Structure-Deck-Powercode-Link
+SR07,Structure-Deck-Zombie-Horde
+SDSB,Structure-Deck-Soulburner
+SR08,Structure-Deck-Order-of-the-Spellcasters
+SDRR,Structure-Deck-Rokket-Revolt
+SDSH,Structure-Deck-Shadoll-Showdown
+SR10,Structure-Deck-Mechanized-Madness
+SDSA,Structure-Deck-Sacred-Beasts
+SDCH,Structure-Deck-Spirit-Charmers
+SDFC,Structure-Deck-Freezing-Chains
+SDCS,Structure-Deck-Cyber-Strike
+SDAZ,Structure-Deck-Albaz-Strike
+SDLC,Structure-Deck-Legend-of-the-Crystal-Beasts
+//
+//Preconstructed/Other Decks
+DUDE,Duel-Devastator
+NKRT,Noble-Knights-of-the-Round-Table-Box-Set
+YGLD,Yugis-Legendary-Decks
+LDK2,Legendary-Decks-II
+LEDD,Legendary-Dragon-Decks
+LEHD,Legendary-Hero-Decks
+//
+//Expansion Packs
+//Taken from https://yugioh.fandom.com/wiki/Expansion_Pack
+//Booster SP / Deck Build Packs
+//
+//OCG
+//
+//TCG equivalents
+THSF,The-Secret-Forces
+HSRD,HighSpeed-Riders
+WIRA,Wing-Raiders
+DESO,Destiny-Soldiers
+FUEN,Fusion-Enforcers
+SPWA,Spirit-Warriors
+DASA,Dark-Saviors
+HISU,Hidden-Summoners
+INCH,The-Infinity-Chasers
+MYFI,Mystic-Fighters
+SESL,Secret-Slayers
+GEIM,Genesis-Impact
+ANGU,Ancient-Guardians
+GRCR,The-Grand-Creators
+TAMA,Tactical-Masters
+//
+//Collectors Packs / Collection Pack
+//OCG
+//
+//TCG equivalents
+NUMH,Number-Hunters
+DRLG,Dragons-of-Legend
+DRL2,Dragons-of-Legend-2
+DRL3,Dragons-of-Legend-Unleashed
+BLLR,Battles-of-Legend-Lights-Revenge
+BLRR,Battles-of-Legend-Relentless-Revenge
+BLHR,Battles-of-Legend-Heros-Revenge
+BLAR,Battles-of-Legend-Armageddon
+BROL,Brothers-of-Legend
+BLCR,Battles-of-Legend-Crystal-Revenge
+//
+//TCG compilations
+DLCS,Dragons-of-Legend-The-Complete-Series
+//
+//Duelist Packs
+DP1,Duelist-Pack-Jaden-Yuki
+DP2,Duelist-Pack-Chazz-Princeton
+DP03,Duelist-Pack-Jaden-Yuki-2
+DP04,Duelist-Pack-Zane-Truesdale
+DP05,Duelist-Pack-Aster-Phoenix
+DP06,Duelist-Pack-Jaden-Yuki-3
+DP07,Duelist-Pack-Jesse-Anderson
+DP08,Duelist-Pack-Yusei
+DPYG,Duelist-Pack-Yugi
+DP09,Duelist-Pack-Yusei-2
+DPKB,Duelist-Pack-Kaiba
+DP10,Duelist-Pack-Yusei-3
+DP11,Duelist-Pack-Crow
+DPBC,Duelist-Pack-Battle-City
+DPRP,Duelist-Pack-Rivals-of-the-Pharaoh
+DPDG,Duelist-Pack-Dimensional-Guardians
+//
+//Legend Duelist - OCG
+//
+//Legendary Duelists
+LEDU,Legendary-Duelists
+LED2,Legendary-Duelists-Ancient-Millennium
+LED3,Legendary-Duelists-White-Dragon-Abyss
+LED4,Legendary-Duelists-Sisters-of-the-Rose
+LED5,Legendary-Duelists-Immortal-Destiny
+LED6,Legendary-Duelists-Magical-Hero
+LED7,Legendary-Duelists-Rage-of-Ra
+LED8,Legendary-Duelists-Synchro-Storm
+LED9,Legendary-Duelists-9
+//
+//Legendary Duelists Compilations
+LDS1,Legendary-Duelists-Season-1
+LDS2,Legendary-Duelists-Season-2
+LDS3,Legendary-Duelists-Season-3
+//
+//Expansion Packs - korean only
+//
+//Extra Packs - OCG
+//
+//Gold Series
+GLD1,Gold-Series-1
+GLD2,Gold-Series-2
+GLD3,Gold-Series-3
+GLD4,Gold-Series-4-Pyramids-Edition
+GLD5,Gold-Series-5-Haunted-Mine
+PGLD,Premium-Gold
+PGL2,Premium-Gold-2
+PGL3,Premium-Gold-Infinite-Gold
+MAGO,Maximum-Gold
+MGED,Maximum-Gold-El-Dorado
+//
+//Hidden Arsenal
+HA01,Hidden-Arsenal
+HA02,Hidden-Arsenal-2
+HA03,Hidden-Arsenal-3
+HA04,Hidden-Arsenal-4
+HA05,Hidden-Arsenal-5
+HA06,Hidden-Arsenal-6
+HA07,Hidden-Arsenal-7
+HASE,Hidden-Arsenal-Special-Edition
+HAC1,Hidden-Arsenal-Chapter-1
+//
+//Jump Festas - OCG
+//
+//Mega Packs
+RYMP,Ra-Yellow-Mega-Pack
+LC01,Legendary-Collection
+LCGX,Legendary-Collection-2-Mega-Pack
+LC02,Legendary-Collection-2-The-Duel-Academy-Years
+LCYW,Legendary-Collection-3-Mega-Pack
+LC03,Legendary-Collection-3-Yugis-World
+LC04,Legendary-Collection-4-Joeys-World
+LCJW,Legendary-Collection-4-Mega-Pack
+LC05,Legendary-Collection-5Ds
+LC5D,Legendary-Collection-5Ds-Mega-Pack
+LC06,Legendary-Collection-Kaiba
+LCKC,Legendary-Collection-Kaiba-Mega-Pack
+//
+//Mega Tins
+CT1,Collectors-Tins-2004
+CT2,Collectors-Tins-2005
+CT03,Collectors-Tins-2006
+CT04,Collectors-Tins-2007
+CT05,Collectors-Tins-2008
+CT06,Collectors-Tins-2009
+DPCT,Duelist-Pack-Collection-Tin-2010
+CT07,Collectors-Tins-2010
+CT08,Collectors-Tins-2011
+CT09,Collectors-Tins-2012
+CT10,Collectors-Tins-2013
+ZTIN,2013-Zexal-Collection-Tin
+CT11,2014-MegaTins
+MP14,2014-MegaTin-MegaPack
+CT12,2015-MegaTins
+MP15,2015-MegaTin-Mega-Pack
+CT13,2016-MegaTins
+MP16,2016-MegaTin-Mega-Pack
+CT14,2017-MegaTins
+MP17,2017-MegaTin-Mega-Pack
+CT15,2018-Mega-Tins
+MP18,2018-MegaTin-Mega-Pack
+TN19,2019-Gold-Sarcophagus-Tin
+MP19,2019-Gold-Sarcophagus-Tin-Mega-Pack
+MP20,2020-Tin-of-Lost-Memories-Mega-Pack
+MP21,2021-Tin-of-Ancient-Battles
+//
+//Tournament Packs
+//Taken from: https://yugioh.fandom.com/wiki/OTS_Tournament_Pack
+TP1,Tournament-Pack-1
+TP2,Tournament-Pack-2
+TP3,Tournament-Pack-3
+TP4,Tournament-Pack-4
+TP5,Tournament-Pack-5
+TP6,Tournament-Pack-6
+TP7,Tournament-Pack-7
+TP8,Tournament-Pack-8
+//
+//OTS Tournament Packs
+//
+OP01,OTS-Tournament-Pack-1
+OP02,OTS-Tournament-Pack-2
+OP03,OTS-Tournament-Pack-3
+OP04,OTS-Tournament-Pack-4
+OP05,OTS-Tournament-Pack-5
+OP06,OTS-Tournament-Pack-6
+OP07,OTS-Tournament-Pack-7
+OP08,OTS-Tournament-Pack-8
+OP09,OTS-Tournament-Pack-9
+OP10,OTS-Tournament-Pack-10
+OP11,OTS-Tournament-Pack-11
+OP12,OTS-Tournament-Pack-12
+OP13,OTS-Tournament-Pack-13
+OP14,OTS-Tournament-Pack-14
+OP15,OTS-Tournament-Pack-15
+OP16,OTS-Tournament-Pack-16
+OP17,OTS-Tournament-Pack-17
+OP18,OTS-Tournament-Pack-18
+OP19,OTS-Tournament-Pack-19
+//
+//Duel Terminals
+//Taken from: https://yugioh.fandom.com/wiki/Template:Duel_Terminals
+DTP1,Duel-Terminal-Preview
+DT01,Duel-Terminal-1
+DT02,Duel-Terminal-2
+DT03,Duel-Terminal-3
+DT04,Duel-Terminal-4
+DT05,Duel-Terminal-5
+DT06,Duel-Terminal-6
+DT07,Duel-Terminal-7
+//Reprint sets
+DB1,Dark-Beginning-1
+DB2,Dark-Beginning-2
+DR1,Dark-Revelation-1
+DR2,Dark-Revelation-2
+DR3,Dark-Revelation-3
+DR04,Dark-Revelation-4
+RP01,Retro-Pack
+RP02,Retro-Pack-2
+DLG1,Dark-Legends
+//
+//Movie Packs
+MOV,YuGiOh-The-Movie
+YMP1,3D-Bonds-Beyond-Time-Movie-Pack
+MVP1,The-Dark-Side-of-Dimensions-Movie-Pack
+//
+//Power-Up Packs / Enhancement Packs    - OCG
+//Premium Packs
+PP01,Premium-Pack-1-Booster
+PP02,Premium-Pack-2-Booster
+//
+//Promotion Packs   - OCG
+//Special Packs - OCG
+//Star Packs
+SP13,Star-Pack-2013
+SP14,Star-Pack-2014
+SP15,Star-Pack-Arc-V-Booster
+SP17,Star-Pack-Battle-Royal
+SP18,Star-Pack-VRAINS
+//
+//Speed Duel Booster Packs
+SBLS,Arena-of-Lost-Souls
+SBAD,Attack-from-the-Deep
+SBSC,Scars-of-Battle
+SBTK,Speed-Duel-Trials-of-the-Kingdom
+STP1,Speed-Duel-Tournament-Pack-1
+STP2,Speed-Duel-Tournament-Pack-2
+STP3,Speed-Duel-Tournament-Pack-3
+//
+//Other
+YAP1,Anniversary-Pack
+EP1,Exclusive-Pack-1
+//
+//OCG
+//TCG
+//Collector Boxes
+DUSA,Duelist-Saga
+DUPO,Duel-Power
+DUOV,Duel-Overload
+//
+//60 card Sets
+PEVO,Pendulum-Evolution
+SHVA,Shadows-in-Valhalla
+FIGA,Fists-of-the-Gadgets
+TOCH,Toon-Chaos
+KICO,Kings-Court
+//
+//Ghosts From the Past
+GFTP,Ghosts-From-the-Past
+GFP2,2022-Ghosts-From-the-Past
+//
+//Millenium pack
+MIL1,Millennium-Pack
+TKN1,Token-Promos-1
+TKN2,Token-Promos-2
+TKN3,Token-Promos-3
+TKN4,Token-Promos-4
+//
+//World Championship Packs
+WC4,World-Championship-2004
+WC5,World-Championship-2005
+WC6,World-Championship-2006
+WC07,World-Championship-2007
+WC08,World-Championship-2008
+WCPP,World-Championship-2010-Card-Pack
+WC11,World-Championship-2011-Card-Pack
+WQ11,World-Championship-Qualifier-2011-Promos
+WCCP,World-Championship-Celebration-Promos
+WSUP,World-Superstars
