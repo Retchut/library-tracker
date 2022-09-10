@@ -282,12 +282,12 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def testErrorCase1(self):
-        name = "Lightning Storm"
-        version = 2
-        rarity = "Prismatic Secret Rare"
-        expansion = "IGAS"
-        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Ignition-Assault/Lightning-Storm-V-2-Prismatic-Secret-Rare"
+    def testError1(self):
+        name = "Lonefire Blossom"
+        version = 0
+        rarity = "Super Rare"
+        expansion = "FUEN"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Fusion-Enforcers/Lonefire-Blossom"
 
         returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
