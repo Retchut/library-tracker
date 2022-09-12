@@ -182,7 +182,7 @@ SR07,Structure-Deck-Zombie-Horde
 SDSB,Structure-Deck-Soulburner
 SR08,Structure-Deck-Order-of-the-Spellcasters
 SDRR,Structure-Deck-Rokket-Revolt
-SDSH,Structure-Deck-Shadoll-Showdown
+SDSH,Structure-Deck-Shaddoll-Showdown
 SR10,Structure-Deck-Mechanized-Madness
 SDSA,Structure-Deck-Sacred-Beasts
 SDCH,Structure-Deck-Spirit-Charmers
