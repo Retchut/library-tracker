@@ -23,7 +23,7 @@ class URLTest(unittest.TestCase):
     loadExpansions()
     
     def getFailureString(self, expected, returnedURLs):
-        return "{0} not in \n{1}".format(expected, returnedURLs)
+        return "\n{0}\n not in \n{1}".format(expected, returnedURLs)
 
     def testSimpleOneWord1(self):
         name = "Tatsunoko"
@@ -236,6 +236,16 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
+    def testApostrophe3(self):
+        name = "Majesty's Fiend"
+        version = 0
+        rarity = "Rare"
+        expansion = "MGED"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Gold-El-Dorado/Majestys-Fiend"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
 
     def testAlternateRarities1(self):
         name = "Effect Veiler"
@@ -283,14 +293,15 @@ class URLTest(unittest.TestCase):
 
 
     def testError1(self):
-        name = "Lonefire Blossom"
+        name = "Manju of the Ten Thousand Hands"
         version = 0
-        rarity = "Super Rare"
-        expansion = "FUEN"
-        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Fusion-Enforcers/Lonefire-Blossom"
+        rarity = "Common"
+        expansion = "OP18"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/OTS-Tournament-Pack-18/Manju-of-the-Ten-Thousand-Hands"
 
         returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
 
 if __name__ == "__main__":
     unittest.main()
