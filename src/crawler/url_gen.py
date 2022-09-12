@@ -30,18 +30,19 @@ def getCompleteURLs(url : str, name : str, version : int, rarity : str):
         possibleURLs.append(url + urlify(name + " (V-" + str(version) + ")"))
     else:
         possibleURLs.append(url + urlify(name))
-    return possibleURLs
+    fixedURLs = fixApostropheURLs(possibleURLs)
+    return fixedURLs
 
 def urlify(string : str):
     #Characters cardmarket seems to ignore, when creating the url of cards
     ignoreChars = [ '"', '?', '!', ',', '@', '/', '&', '=', ':', '(', ')', '.']
+    replaceWithDash = [ '-', ' ' ]
 
     urlString = ""
-
     for c in string:
         if c in ignoreChars:
             continue
-        elif(c == '-' or c == ' '):
+        elif(c in replaceWithDash):
             # write '-' only if the previous character written was not a '-'
             if(urlString[-1] != '-'):
                 urlString += '-'
@@ -49,18 +50,18 @@ def urlify(string : str):
             # preserve char
             urlString += c
 
-            
-
-
-    # for i in range(len(string)):
-    #     current = string[i]
-    #     if current in ignoreChars:
-    #         continue
-    #     elif (current == '-' or current == ' '):
-    #         #replace space with '-', or write '-', if one hasn't been already written
-    #         if(urlString[:-1] != '-'):
-    #             urlString += '-'
-    #     else:
-    #         #add normal char to url
-    #         urlString += current
     return urlString
+
+# in the case that the card name contains an URL, cardmarket either ignores it, or
+# replaces it with a dash, seemingly at random
+# this function accounts for all those versions
+def fixApostropheURLs(generatedURLs):
+    fixedURLs = []
+    for url in generatedURLs:
+        if '\'' in url:
+            ignoreApostrophe = url.replace('\'', '')
+            replaceWithDash = url.replace('\'', '-')
+            fixedURLs.extend([ignoreApostrophe, replaceWithDash])
+        else:
+            fixedURLs.append(url)
+    return fixedURLs

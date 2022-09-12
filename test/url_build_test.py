@@ -23,9 +23,9 @@ class URLTest(unittest.TestCase):
     loadExpansions()
     
     def getFailureString(self, expected, returnedURLs):
-        return "{0} not in \n{1}".format(expected, returnedURLs)
+        return "\n{0}\n not in \n{1}".format(expected, returnedURLs)
 
-    def test_urlSimpleOneWord1(self):
+    def testSimpleOneWord1(self):
         name = "Tatsunoko"
         version = 0
         rarity = "Super Rare"
@@ -36,7 +36,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlSimpleOneWord2(self):
+    def testSimpleOneWord2(self):
         name = "Zefraath"
         version = 0
         rarity = "Super Rare"
@@ -47,7 +47,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlSimpleTwoWords(self):
+    def testSimpleTwoWords(self):
         name = "Zefra Providence"
         version = 0
         rarity = "Rare"
@@ -58,7 +58,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlSimpleMultipleWords(self):
+    def testSimpleMultipleWords(self):
         name = "Oracle of Zefra"
         version = 0
         rarity = "Super Rare"
@@ -69,7 +69,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlWithCommas(self):
+    def testCommas(self):
         name = "Zefraniu, Secret of the Yang Zing"
         version = 0
         rarity = "Rare"
@@ -81,7 +81,7 @@ class URLTest(unittest.TestCase):
 
 
 
-    def test_urlWithSlash(self):
+    def testSlash(self):
         name = "D/D/D Supersight King Zero Maxwell"
         version = 0
         rarity = "Common"
@@ -93,7 +93,7 @@ class URLTest(unittest.TestCase):
 
 
 
-    def test_urlWithEquals(self):
+    def testEquals(self):
         name = "Damage = Reptile"
         version = 0
         rarity = "Rare"
@@ -104,7 +104,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlWithColon(self):
+    def testColon(self):
         name = "Number 39: Utopia"
         version = 0
         rarity = "Ultra Rare"
@@ -116,7 +116,7 @@ class URLTest(unittest.TestCase):
 
 
 
-    def test_urlWithAmpersand(self):
+    def testAmpersand(self):
         name = "Ghost Reaper & Winter Cherries"
         version = 0
         rarity = "Ultra Rare"
@@ -127,7 +127,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlWithAt(self):
+    def testAt(self):
         name = "Bururu @Ignister"
         version = 0
         rarity = "Rare"
@@ -138,7 +138,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlLotsOfSymbols(self):
+    def testLotsOfSymbols(self):
         name = "Danger!? Tsuchinoko?"
         version = 0
         rarity = "Ultra Rare"
@@ -149,7 +149,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlDash(self):
+    def testDash(self):
         name = "Blue-Eyes White Dragon"
         version = 0
         rarity = "Premium Gold Rare"
@@ -160,7 +160,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlDashWithSpace(self):
+    def testDashWithSpace(self):
         name = "Abyss Actor - Superstar"
         version = 0
         rarity = "Secret Rare"
@@ -171,7 +171,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlWithParentheses1(self):
+    def testParentheses1(self):
         name = "Knightmare Unicorn"
         version = 1
         rarity = "Rare"
@@ -182,7 +182,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlWithParentheses2(self):
+    def testParentheses2(self):
         name = "The Winged Dragon of Ra"
         version = 2
         rarity = "Ghost Rare"
@@ -193,7 +193,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlQuotationMarks1(self):
+    def testQuotationMarks1(self):
         name = "\"A\" Cell Breeding Device"
         version = 0
         rarity = "Common"
@@ -204,7 +204,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_urlQuotationMarks2(self):
+    def testQuotationMarks2(self):
         name = "\"A\" Cell Incubator"
         version = 0
         rarity = "Common"
@@ -214,9 +214,40 @@ class URLTest(unittest.TestCase):
         returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
+    def testApostrophe1(self):
+        name = "Gravekeeper's Shaman"
+        version = 0
+        rarity = "Common"
+        expansion = "SS01"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Speed-Duel-Starter-Decks-Destiny-Masters/Gravekeeper-s-Shaman"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_alternateRarities1(self):
+    def testApostrophe2(self):
+        name = "Vanity's Fiend"
+        version = 0
+        rarity = "Common"
+        expansion = "SR06"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Structure-Deck-Lair-of-Darkness/Vanity-s-Fiend"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testApostrophe3(self):
+        name = "Majesty's Fiend"
+        version = 0
+        rarity = "Rare"
+        expansion = "MGED"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Gold-El-Dorado/Majestys-Fiend"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testAlternateRarities1(self):
         name = "Effect Veiler"
         version = 2
         rarity = "Ultimate Rare"
@@ -227,7 +258,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_alternateRarities2(self):
+    def testAlternateRarities2(self):
         name = "Blue-Eyes White Dragon"
         version = 2
         rarity = "Ultimate Rare"
@@ -238,7 +269,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_alternateRarities3(self):
+    def testAlternateRarities3(self):
         name = "Celestia, Lightsworn Angel"
         version = 2
         rarity = "Ultimate Rare"
@@ -249,7 +280,7 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_alternateRarities4(self):
+    def testAlternateRarities4(self):
         name = "Lightning Storm"
         version = 2
         rarity = "Prismatic Secret Rare"
@@ -261,15 +292,16 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
-    def test_testTest(self):
-        name = "Lightning Storm"
-        version = 2
-        rarity = "Prismatic Secret Rare"
-        expansion = "IGAS"
-        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Ignition-Assault/Lightning-Storm-V-2-Prismatic-Secret-Rare"
+    def testError1(self):
+        name = "Manju of the Ten Thousand Hands"
+        version = 0
+        rarity = "Common"
+        expansion = "OP18"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/OTS-Tournament-Pack-18/Manju-of-the-Ten-Thousand-Hands"
 
         returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
 
 if __name__ == "__main__":
     unittest.main()
