@@ -23,7 +23,7 @@ class URLTest(unittest.TestCase):
     loadExpansions()
     
     def getFailureString(self, expected, returnedURLs):
-        return "{0} not in \n{1}".format(expected, returnedURLs)
+        return "\n{0}\n not in \n{1}".format(expected, returnedURLs)
 
     def testSimpleOneWord1(self):
         name = "Tatsunoko"
@@ -283,11 +283,22 @@ class URLTest(unittest.TestCase):
 
 
     def testError1(self):
-        name = "Lonefire Blossom"
+        name = "Majesty's Fiend"
         version = 0
-        rarity = "Super Rare"
-        expansion = "FUEN"
-        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Fusion-Enforcers/Lonefire-Blossom"
+        rarity = "Rare"
+        expansion = "MGED"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Gold-El-Dorado/Majestys-Fiend"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testError2(self):
+        name = "Vanity's Fiend"
+        version = 0
+        rarity = "Common"
+        expansion = "SR06"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Structure-Deck-Lair-of-Darkness/Vanity-s-Fiend"
 
         returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
