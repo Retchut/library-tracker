@@ -236,6 +236,16 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
+    def testApostrophe3(self):
+        name = "Majesty's Fiend"
+        version = 0
+        rarity = "Rare"
+        expansion = "MGED"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Gold-El-Dorado/Majestys-Fiend"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
 
     def testAlternateRarities1(self):
         name = "Effect Veiler"
@@ -283,25 +293,15 @@ class URLTest(unittest.TestCase):
 
 
     def testError1(self):
-        name = "Majesty's Fiend"
-        version = 0
-        rarity = "Rare"
-        expansion = "MGED"
-        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Gold-El-Dorado/Majestys-Fiend"
-
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
-        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
-
-
-    def testError2(self):
-        name = "Vanity's Fiend"
+        name = "Manju of the Ten Thousand Hands"
         version = 0
         rarity = "Common"
-        expansion = "SR06"
-        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Structure-Deck-Lair-of-Darkness/Vanity-s-Fiend"
+        expansion = "OP18"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/OTS-Tournament-Pack-18/Manju-of-the-Ten-Thousand-Hands"
 
         returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
 
 if __name__ == "__main__":
     unittest.main()
