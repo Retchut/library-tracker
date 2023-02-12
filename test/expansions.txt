@@ -320,6 +320,7 @@ LC06,Legendary-Collection-Kaiba
 LCKC,Legendary-Collection-Kaiba-Mega-Pack
 //
 //Mega Tins
+//Taken from https://yugioh.fandom.com/wiki/Collectible_tin
 CT1,Collectors-Tins-2004
 CT2,Collectors-Tins-2005
 CT03,Collectors-Tins-2006
@@ -346,6 +347,8 @@ TN19,2019-Gold-Sarcophagus-Tin
 MP19,2019-Gold-Sarcophagus-Tin-Mega-Pack
 MP20,2020-Tin-of-Lost-Memories-Mega-Pack
 MP21,2021-Tin-of-Ancient-Battles
+//Premium Collection Tin
+PRC1,Premium-Collection
 //
 //Tournament Packs
 //Taken from: https://yugioh.fandom.com/wiki/OTS_Tournament_Pack
@@ -357,6 +360,17 @@ TP5,Tournament-Pack-5
 TP6,Tournament-Pack-6
 TP7,Tournament-Pack-7
 TP8,Tournament-Pack-8
+//
+//Astral Packs
+//
+AP01,Astral-Pack-One
+AP02,Astral-Pack-Two
+AP03,Astral-Pack-Three
+AP04,Astral-Pack-Four
+AP05,Astral-Pack-Five
+AP06,Astral-Pack-Six
+AP07,Astral-Pack-Seven
+AP08,Astral-Pack-Eight
 //
 //OTS Tournament Packs
 //
@@ -469,3 +483,11 @@ WC11,World-Championship-2011-Card-Pack
 WQ11,World-Championship-Qualifier-2011-Promos
 WCCP,World-Championship-Celebration-Promos
 WSUP,World-Superstars
+//
+//Battle Packs
+//Taken from https://yugioh.fandom.com/wiki/Battle_Pack
+BP01,Battle-Pack-Epic-Dawn
+BP02,Battle-Pack-2-War-of-the-Giants
+WGRT,War-of-the-Giants-Reinforcements
+BPW2,Battle-Pack-2-War-of-the-Giants-Round-2
+BP03,Battle-Pack-3-Monster-League
