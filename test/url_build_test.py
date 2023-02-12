@@ -354,7 +354,7 @@ class URLTest(unittest.TestCase):
 
 
     def testError3(self):
-        name = "Fortress Shark"
+        name = "Shark Fortress"
         version = 0
         rarity = "Common"
         expansion = "LTGY"
@@ -391,7 +391,7 @@ class URLTest(unittest.TestCase):
 
     def testError6(self):
         name = "Number 96: Dark Mist"
-        version = 0
+        version = 1
         rarity = "Common"
         expansion = "SP13"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Star-Pack-2013/Number-96-Dark-Mist-V-1-Common"
