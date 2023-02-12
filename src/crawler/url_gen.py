@@ -1,21 +1,25 @@
+from typing import TextIO
+
 from crawler.expansions import expansions
 from models.card import Card
 
-def buildURLs(card : Card) -> list:
+def buildURLs(card : Card, logfile : TextIO) -> list:
     possibleURLs  = []
     url = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/"
-    urlExpansion = getUrlExpansion(card.getExpansion())
+    urlExpansion = getUrlExpansion(card.getExpansion(), logfile)
     if urlExpansion == "":
         return []
     else:
         url += urlExpansion
     return getCompleteURLs(url, card.getName(), card.getVersion(), card.getRarity())
 
-def getUrlExpansion(expansionKey : str) -> str:
+def getUrlExpansion(expansionKey : str, logfile : TextIO) -> str:
     try:
         expansionURL = expansions[expansionKey]
     except KeyError:
+        keyerror_str = expansionKey + ": There's no such expansion"
         print(expansionKey + ": There's no such expansion")
+        logfile.write(keyerror_str + "\n")
         return ""
     else:
         return expansionURL + '/'

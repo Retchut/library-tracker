@@ -10,16 +10,16 @@ def getPrices(urls : list, logfile : TextIO) -> dict:
         response = requests.get(url)
         resp_str = str(response.status_code) + "| "
         if(response.status_code != 200):
-            resp_str += "Bad status while crawling" + url
-        print(resp_str, end="")
-        logfile.write(resp_str)
+            resp_str = "\tBad status while crawling (" + str(response.status_code) + "): " + url
+            print(resp_str)
+            logfile.write(resp_str + "\n")
         prices = parsePrices(response)
         if prices != {}:
             break
     if prices == {}:
         price_error = "Couldn't fetch prices for the provided urls:\n" + str(urls)
         print(price_error)
-        logfile.write(price_error)
+        logfile.write(price_error + "\n")
     return prices
 
 

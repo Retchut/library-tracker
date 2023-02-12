@@ -217,6 +217,8 @@ def updatePrices(lib : Library) -> None:
     update_time = datetime.now().strftime("%m/%d/%Y-%H:%M:%S")
     crawl_logfile.write("\n------------------------------\n" + update_time + "\n------------------------------\n")
 
+    print("Updating prices...")
+
     lib.sortLibrary(False, lambda card : card.name)
     checkedCardNames = []
     prevPrice = 0.0
@@ -225,16 +227,23 @@ def updatePrices(lib : Library) -> None:
         if card.getName() in checkedCardNames:
             card.updatePrice(prevPrice)
             continue
-        prices = getPrices(buildURLs(card), crawl_logfile)
+        logmsg = "\n" + card.getName()
+        print(logmsg)
+        crawl_logfile.write(logmsg + "\n")
+
+        prices = getPrices(buildURLs(card, crawl_logfile), crawl_logfile)
         if prices == {}:
-            print("Error fetching {0}({1})'s price. No changes were made...".format(card.getName(), card.getExpansion()))
+            failure_str = "Error fetching {0}({1})'s price. No changes were made...".format(card.getName(), card.getExpansion())
+            print(failure_str)
+            crawl_logfile.write(failure_str + "\n")
             continue
         card.updatePrice(prices['fromPrice'])
         checkedCardNames.append(card.getName())
         prevPrice = prices['fromPrice']
+
         success_str = "Updated {0}({1})'s price successfully.".format(card.getName(), card.getExpansion())
         print(success_str)
-        crawl_logfile.write(success_str)
+        crawl_logfile.write(success_str + "\n")
 
     crawl_logfile.close()
 
