@@ -1,14 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 from re import compile
-from datetime import datetime
+from typing import TextIO
 
-CRAWL_LOGFILE = "./crawllog.txt"
-
-def getPrices(urls : list) -> dict:
-    logfile = open(CRAWL_LOGFILE, 'a+')
-    now_time = datetime.now().strftime("%m/%d/%Y-%H:%M:%S")
-    logfile.write("\n------------------------------\n" + now_time + "\n------------------------------\n")
+def getPrices(urls : list, logfile : TextIO) -> dict:
 
     prices = dict()
     for url in urls:
@@ -25,7 +20,6 @@ def getPrices(urls : list) -> dict:
         price_error = "Couldn't fetch prices for the provided urls:\n" + str(urls)
         print(price_error)
         logfile.write(price_error)
-    logfile.close()
     return prices
 
 

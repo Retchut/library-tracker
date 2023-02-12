@@ -1,11 +1,14 @@
 from math import floor
 import traceback
+from datetime import datetime
 
 from models.library import Library
 from utils import getMenuInput, getQueriedInput
 from crawler.expansions import loadExpansions
 from crawler.url_gen import buildURLs
 from crawler.crawl import getPrices
+
+CRAWL_LOGFILE = "./crawllog.txt"
 
 def run() -> None:
     lib = Library()
@@ -210,6 +213,10 @@ def updatePrices(lib : Library) -> None:
     # TODO: Add remaining expansions to the expansions file
     # TODO: Fix miscelaneous issues with the crawler
     # TODO: Rewrite crawler in scrapy because it is faster and allows for more control when crawling
+    crawl_logfile = open(CRAWL_LOGFILE, 'a+')
+    update_time = datetime.now().strftime("%m/%d/%Y-%H:%M:%S")
+    crawl_logfile.write("\n------------------------------\n" + update_time + "\n------------------------------\n")
+
     lib.sortLibrary(False, lambda card : card.name)
     checkedCardNames = []
     prevPrice = 0.0
@@ -218,14 +225,18 @@ def updatePrices(lib : Library) -> None:
         if card.getName() in checkedCardNames:
             card.updatePrice(prevPrice)
             continue
-        prices = getPrices(buildURLs(card))
+        prices = getPrices(buildURLs(card), crawl_logfile)
         if prices == {}:
             print("Error fetching {0}({1})'s price. No changes were made...".format(card.getName(), card.getExpansion()))
             continue
         card.updatePrice(prices['fromPrice'])
         checkedCardNames.append(card.getName())
         prevPrice = prices['fromPrice']
-        print("Updated {0}({1})'s price successfully.".format(card.getName(), card.getExpansion()))
+        success_str = "Updated {0}({1})'s price successfully.".format(card.getName(), card.getExpansion())
+        print(success_str)
+        crawl_logfile.write(success_str)
+
+    crawl_logfile.close()
 
 if __name__ == '__main__':
     run()
