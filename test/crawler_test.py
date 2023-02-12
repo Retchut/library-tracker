@@ -18,6 +18,7 @@ class CrawlerTest(unittest.TestCase):
     amount = 1
     price = 0.0
     loadExpansions()
+    logfile = open("./crawlertestlog.txt", "w")
 
     def buildCard(self, name, version, rarity, expansion) -> Card:
         return Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price)
@@ -31,7 +32,7 @@ class CrawlerTest(unittest.TestCase):
         delta = 0.10
         card = self.buildCard(name, version, rarity, expansion)
 
-        prices = getPrices(buildURLs(card))
+        prices = getPrices(buildURLs(card, self.logfile), self.logfile)
         self.assertFalse(prices == {}, "Prices is empty")
         self.assertAlmostEqual(prices['fromPrice'], expected, delta=delta)
 
@@ -44,7 +45,7 @@ class CrawlerTest(unittest.TestCase):
         delta = 0.10
         card = self.buildCard(name, version, rarity, expansion)
 
-        prices = getPrices(buildURLs(card))
+        prices = getPrices(buildURLs(card, self.logfile), self.logfile)
         self.assertFalse(prices == {}, "Prices is empty")
         self.assertAlmostEqual(prices['fromPrice'], expected, delta=delta)
 
@@ -57,7 +58,7 @@ class CrawlerTest(unittest.TestCase):
         delta = 50
         card = self.buildCard(name, version, rarity, expansion)
 
-        prices = getPrices(buildURLs(card))
+        prices = getPrices(buildURLs(card, self.logfile), self.logfile)
         self.assertFalse(prices == {}, "Prices is empty")
         self.assertAlmostEqual(prices['fromPrice'], expected, delta=delta)
 
@@ -71,7 +72,7 @@ class CrawlerTest(unittest.TestCase):
         delta = 0.10
         card = self.buildCard(name, version, rarity, expansion)
 
-        prices = getPrices(buildURLs(card))
+        prices = getPrices(buildURLs(card, self.logfile), self.logfile)
         self.assertFalse(prices == {}, "Prices is empty")
         self.assertAlmostEqual(prices['fromPrice'], expected, delta=delta)
 

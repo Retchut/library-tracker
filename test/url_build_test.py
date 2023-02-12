@@ -21,6 +21,8 @@ class URLTest(unittest.TestCase):
     amount = 1
     price = 0.0
     loadExpansions()
+    modifiers = "?minCondition=2"
+    logfile = open("./urltestlog.txt", "w")
     
     def getFailureString(self, expected, returnedURLs):
         return "\n{0}\n not in \n{1}".format(expected, returnedURLs)
@@ -31,8 +33,9 @@ class URLTest(unittest.TestCase):
         rarity = "Super Rare"
         expansion = "HISU"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Hidden-Summoners/Tatsunoko"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -42,8 +45,9 @@ class URLTest(unittest.TestCase):
         rarity = "Super Rare"
         expansion = "MACR"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Crisis/Zefraath"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -53,8 +57,9 @@ class URLTest(unittest.TestCase):
         rarity = "Rare"
         expansion = "MACR"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Crisis/Zefra-Providence"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -64,8 +69,9 @@ class URLTest(unittest.TestCase):
         rarity = "Super Rare"
         expansion = "PEVO"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Pendulum-Evolution/Oracle-of-Zefra"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -75,8 +81,9 @@ class URLTest(unittest.TestCase):
         rarity = "Rare"
         expansion = "CROS"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Crossed-Souls/Zefraniu-Secret-of-the-Yang-Zing"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -87,8 +94,9 @@ class URLTest(unittest.TestCase):
         rarity = "Common"
         expansion = "LIOV"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Lightning-Overdrive/DDD-Supersight-King-Zero-Maxwell"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -99,8 +107,9 @@ class URLTest(unittest.TestCase):
         rarity = "Rare"
         expansion = "ANGU"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Ancient-Guardians/Damage-Reptile"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -110,8 +119,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ultra Rare"
         expansion = "DUPO"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Duel-Power/Number-39-Utopia"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -122,8 +132,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ultra Rare"
         expansion = "DUPO"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Duel-Power/Ghost-Reaper-Winter-Cherries"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -133,8 +144,9 @@ class URLTest(unittest.TestCase):
         rarity = "Rare"
         expansion = "IGAS"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Ignition-Assault/Bururu-Ignister"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -144,8 +156,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ultra Rare"
         expansion = "MP19"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/2019-Gold-Sarcophagus-Tin-Mega-Pack/Danger-Tsuchinoko"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -155,8 +168,9 @@ class URLTest(unittest.TestCase):
         rarity = "Premium Gold Rare"
         expansion = "MAGO"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Gold/Blue-Eyes-White-Dragon"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
     def testDash2(self):
@@ -165,8 +179,9 @@ class URLTest(unittest.TestCase):
         rarity = "Secret Rare"
         expansion = "SHVA"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Shadows-in-Valhalla/GemKnight-Seraphinite"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -176,8 +191,9 @@ class URLTest(unittest.TestCase):
         rarity = "Secret Rare"
         expansion = "DESO"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Destiny-Soldiers/Abyss-Actor-Superstar"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -187,8 +203,9 @@ class URLTest(unittest.TestCase):
         rarity = "Rare"
         expansion = "GEIM"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Genesis-Impact/Knightmare-Unicorn-V1-Rare"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -198,8 +215,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ghost Rare"
         expansion = "LED7"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Legendary-Duelists-Rage-of-Ra/The-Winged-Dragon-of-Ra-V2-Ghost-Rare"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -209,8 +227,9 @@ class URLTest(unittest.TestCase):
         rarity = "Common"
         expansion = "FOTB"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Force-of-the-Breaker/A-Cell-Breeding-Device"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -220,8 +239,9 @@ class URLTest(unittest.TestCase):
         rarity = "Common"
         expansion = "GLAS"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Gladiators-Assault/A-Cell-Incubator"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
     def testApostrophe1(self):
@@ -230,8 +250,9 @@ class URLTest(unittest.TestCase):
         rarity = "Common"
         expansion = "SS01"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Speed-Duel-Starter-Decks-Destiny-Masters/Gravekeeper-s-Shaman"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -241,8 +262,9 @@ class URLTest(unittest.TestCase):
         rarity = "Common"
         expansion = "SR06"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Structure-Deck-Lair-of-Darkness/Vanity-s-Fiend"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -252,8 +274,9 @@ class URLTest(unittest.TestCase):
         rarity = "Rare"
         expansion = "MGED"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Maximum-Gold-El-Dorado/Majestys-Fiend"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -263,8 +286,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ultimate Rare"
         expansion = "DREV"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Duelist-Revolution/Effect-Veiler-V-2"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -274,8 +298,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ultimate Rare"
         expansion = "YSKR"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Starter-Deck-Kaiba-Reloaded/Blue-Eyes-White-Dragon-V-2"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -285,8 +310,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ultimate Rare"
         expansion = "LODT"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Light-of-Destruction/Celestia-Lightsworn-Angel-V-2-Ultimate-Rare"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -296,8 +322,9 @@ class URLTest(unittest.TestCase):
         rarity = "Prismatic Secret Rare"
         expansion = "IGAS"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Ignition-Assault/Lightning-Storm-V-2-Prismatic-Secret-Rare"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
@@ -308,8 +335,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ultra Rare"
         expansion = "LVAL"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Legacy-of-the-Valiant/Bujintei-Tsukuyomi-V-1"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -319,8 +347,9 @@ class URLTest(unittest.TestCase):
         rarity = "Secret Rare"
         expansion = "MP14"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/2014-MegaTins-MegaPack/Divine-Dragon-Knight-Felgrand"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -330,8 +359,9 @@ class URLTest(unittest.TestCase):
         rarity = "Common"
         expansion = "LTGY"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Lord-of-the-Tachyon-Galaxy/Shark-Fortress"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -341,8 +371,9 @@ class URLTest(unittest.TestCase):
         rarity = "Secret Rare"
         expansion = "MP14"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/2014-MegaTins-MegaPack/Meliae-of-the-Trees"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -352,8 +383,9 @@ class URLTest(unittest.TestCase):
         rarity = "Ultra Rare"
         expansion = "YS11"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Starter-Deck-Dawn-of-the-Xyz/Number-39-Utopia-V-1-Ultra-Rare"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -363,8 +395,9 @@ class URLTest(unittest.TestCase):
         rarity = "Common"
         expansion = "SP13"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Star-Pack-2013/Number-96-Dark-Mist-V-1-Common"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -374,8 +407,9 @@ class URLTest(unittest.TestCase):
         rarity = "Rare"
         expansion = "BP01"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Battle-Pack-Epic-Dawn/Jinzo-V-1"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
@@ -385,8 +419,9 @@ class URLTest(unittest.TestCase):
         rarity = "Common"
         expansion = "BP01"
         expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Battle-Pack-Epic-Dawn/Psi-Blocker-V-1"
+        expected += self.modifiers
 
-        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
