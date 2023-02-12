@@ -303,22 +303,88 @@ class URLTest(unittest.TestCase):
 
 
     def testError1(self):
-        name = "Manju of the Ten Thousand Hands"
-        version = 0
-        rarity = "Common"
-        expansion = "OP18"
-        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/OTS-Tournament-Pack-18/Manju-of-the-Ten-Thousand-Hands"
+        name = "Bujintei Tsukuyomi"
+        version = 1
+        rarity = "Ultra Rare"
+        expansion = "LVAL"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Legacy-of-the-Valiant/Bujintei-Tsukuyomi-V-1"
 
         returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
     def testError2(self):
-        name = "Lib the World Key Blademaster"
+        name = "Divine Dragon Knight Felgrand"
         version = 0
+        rarity = "Secret Rare"
+        expansion = "MP14"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/2014-MegaTins-MegaPack/Divine-Dragon-Knight-Felgrand"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testError3(self):
+        name = "Fortress Shark"
+        version = 0
+        rarity = "Common"
+        expansion = "LTGY"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Lord-of-the-Tachyon-Galaxy/Shark-Fortress"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testError4(self):
+        name = "Meliae of the Trees"
+        version = 0
+        rarity = "Secret Rare"
+        expansion = "MP14"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/2014-MegaTins-MegaPack/Meliae-of-the-Trees"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testError5(self):
+        name = "Number 39: Utopia"
+        version = 1
         rarity = "Ultra Rare"
-        expansion = "DUOV"
-        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Duel-Overload/Lib-the-World-Key-Blademaster"
+        expansion = "YS11"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Starter-Deck-Dawn-of-the-Xyz/Number-39-Utopia-V-1-Ultra-Rare"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testError6(self):
+        name = "Number 96: Dark Mist"
+        version = 0
+        rarity = "Common"
+        expansion = "SP13"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Star-Pack-2013/Number-96-Dark-Mist-V-1-Common"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testError7(self):
+        name = "Jinzo"
+        version = 1
+        rarity = "Rare"
+        expansion = "BP01"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Battle-Pack-Epic-Dawn/Jinzo-V-1"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
+    def testError8(self):
+        name = "Psi-Blocker"
+        version = 1
+        rarity = "Common"
+        expansion = "BP01"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Battle-Pack-Epic-Dawn/Psi-Blocker-V-1"
 
         returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
