@@ -22,16 +22,31 @@ def getUrlExpansion(expansionKey : str) -> str:
 
 def getCompleteURLs(url : str, name : str, version : int, rarity : str):
     possibleURLs = []
+    possibleNames = getPossibleNames(name)
     if version > 0 :
-        #Add the 4 possible different urls that cardmarket may use for the item, in order of most common to least common
-        possibleURLs.append(url + urlify(name + " (V" + str(version) + " " + rarity + ")"))
-        possibleURLs.append(url + urlify(name + " (V-" + str(version) + " " + rarity + ")"))
-        possibleURLs.append(url + urlify(name + " (V" + str(version) + ")"))
-        possibleURLs.append(url + urlify(name + " (V-" + str(version) + ")"))
+        # first name in the list is most likely
+        for name in possibleNames:
+            #Add the 4 possible different urls that cardmarket may use for the item, in order of most common to least common
+            version_strings = [
+                name + " (V" + str(version) + " " + rarity + ")",
+                name + " (V-" + str(version) + " " + rarity + ")",
+                name + " (V" + str(version) + ")",
+                name + " (V-" + str(version) + ")"
+            ]
+            for version_str in version_strings:
+                possibleURLs.append(url + urlify(version_str))
     else:
-        possibleURLs.append(url + urlify(name))
+        for name in possibleNames:
+            possibleURLs.append(url + urlify(name))
     fixedURLs = fixApostropheURLs(possibleURLs)
     return fixedURLs
+
+# if the name of a card contains a dash, it can be either ignored or maitained, seemingly at random
+# this function takes into account both possibilities
+def getPossibleNames(name : str):
+    possibleNames = [ name ]
+    possibleNames.append(name.replace('-', ''))
+    return possibleNames
 
 def urlify(string : str):
     #Characters cardmarket seems to ignore, when creating the url of cards
@@ -52,13 +67,27 @@ def urlify(string : str):
 
     return urlString
 
-# in the case that the card name contains an URL, cardmarket either ignores it, or
+# in the case that the card name contains an apostrophe, cardmarket either ignores it, or
 # replaces it with a dash, seemingly at random
 # this function accounts for all those versions
 def fixApostropheURLs(generatedURLs):
     fixedURLs = []
     for url in generatedURLs:
         if '\'' in url:
+            ignoreApostrophe = url.replace('\'', '')
+            replaceWithDash = url.replace('\'', '-')
+            fixedURLs.extend([ignoreApostrophe, replaceWithDash])
+        else:
+            fixedURLs.append(url)
+    return fixedURLs
+
+# in the case that the card name contains a dash, cardmarket either ignores it, or
+# replaces it with a dash, seemingly at random
+# this function accounts for all those versions
+def fixDashURLs(generatedURLs):
+    fixedURLs = []
+    for url in generatedURLs:
+        if '-' in url:
             ignoreApostrophe = url.replace('\'', '')
             replaceWithDash = url.replace('\'', '-')
             fixedURLs.extend([ignoreApostrophe, replaceWithDash])
