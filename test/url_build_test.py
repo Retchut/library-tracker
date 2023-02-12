@@ -303,5 +303,16 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
+    def testError2(self):
+        name = "Lib the World Key Blademaster"
+        version = 0
+        rarity = "Ultra Rare"
+        expansion = "DUOV"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Duel-Overload/Lib-the-World-Key-Blademaster"
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price))
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
 if __name__ == "__main__":
     unittest.main()
