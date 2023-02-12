@@ -11,7 +11,7 @@ def getPrices(urls : list, logfile : TextIO) -> dict:
         resp_str = str(response.status_code) + "| "
         if(response.status_code != 200):
             resp_str += "Bad status while crawling" + url
-        print(resp_str)
+        print(resp_str, end="")
         logfile.write(resp_str)
         prices = parsePrices(response)
         if prices != {}:
