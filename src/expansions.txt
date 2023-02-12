@@ -334,7 +334,7 @@ CT09,Collectors-Tins-2012
 CT10,Collectors-Tins-2013
 ZTIN,2013-Zexal-Collection-Tin
 CT11,2014-MegaTins
-MP14,2014-MegaTin-MegaPack
+MP14,2014-MegaTins-MegaPack
 CT12,2015-MegaTins
 MP15,2015-MegaTin-Mega-Pack
 CT13,2016-MegaTins
