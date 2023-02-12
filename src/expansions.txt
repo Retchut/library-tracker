@@ -320,6 +320,7 @@ LC06,Legendary-Collection-Kaiba
 LCKC,Legendary-Collection-Kaiba-Mega-Pack
 //
 //Mega Tins
+//Taken from https://yugioh.fandom.com/wiki/Collectible_tin
 CT1,Collectors-Tins-2004
 CT2,Collectors-Tins-2005
 CT03,Collectors-Tins-2006
@@ -346,6 +347,8 @@ TN19,2019-Gold-Sarcophagus-Tin
 MP19,2019-Gold-Sarcophagus-Tin-Mega-Pack
 MP20,2020-Tin-of-Lost-Memories-Mega-Pack
 MP21,2021-Tin-of-Ancient-Battles
+//Premium Collection Tin
+PRC1,Premium-Collection
 //
 //Tournament Packs
 //Taken from: https://yugioh.fandom.com/wiki/OTS_Tournament_Pack
