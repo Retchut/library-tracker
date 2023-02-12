@@ -358,6 +358,17 @@ TP6,Tournament-Pack-6
 TP7,Tournament-Pack-7
 TP8,Tournament-Pack-8
 //
+//Astral Packs
+//
+AP01,Astral-Pack-One
+AP02,Astral-Pack-Two
+AP03,Astral-Pack-Three
+AP04,Astral-Pack-Four
+AP05,Astral-Pack-Five
+AP06,Astral-Pack-Six
+AP07,Astral-Pack-Seven
+AP08,Astral-Pack-Eight
+//
 //OTS Tournament Packs
 //
 OP01,OTS-Tournament-Pack-1
