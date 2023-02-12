@@ -483,3 +483,11 @@ WC11,World-Championship-2011-Card-Pack
 WQ11,World-Championship-Qualifier-2011-Promos
 WCCP,World-Championship-Celebration-Promos
 WSUP,World-Superstars
+//
+//Battle Packs
+//Taken from https://yugioh.fandom.com/wiki/Battle_Pack
+BP01,Battle-Pack-Epic-Dawn
+BP02,Battle-Pack-2-War-of-the-Giants
+WGRT,War-of-the-Giants-Reinforcements
+BPW2,Battle-Pack-2-War-of-the-Giants-Round-2
+BP03,Battle-Pack-3-Monster-League
