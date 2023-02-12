@@ -229,10 +229,10 @@ def updatePrices(lib : Library) -> None:
             continue
         logmsg = "\n" + card.getName()
         print(logmsg)
-        crawl_logfile.write(logmsg + "\n")
 
         prices = getPrices(buildURLs(card, crawl_logfile), crawl_logfile)
         if prices == {}:
+            crawl_logfile.write(logmsg + "\n")
             failure_str = "Error fetching {0}({1})'s price. No changes were made...".format(card.getName(), card.getExpansion())
             print(failure_str)
             crawl_logfile.write(failure_str + "\n")
@@ -243,7 +243,6 @@ def updatePrices(lib : Library) -> None:
 
         success_str = "Updated {0}({1})'s price successfully.".format(card.getName(), card.getExpansion())
         print(success_str)
-        crawl_logfile.write(success_str + "\n")
 
     crawl_logfile.close()
 
