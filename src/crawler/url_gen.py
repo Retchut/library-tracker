@@ -27,6 +27,7 @@ def getUrlExpansion(expansionKey : str, logfile : TextIO) -> str:
 def getCompleteURLs(url : str, name : str, version : int, rarity : str):
     possibleURLs = []
     possibleNames = getPossibleNames(name)
+    get_parameters = "?minCondition=2"
     if version > 0 :
         # first name in the list is most likely
         for name in possibleNames:
@@ -38,10 +39,10 @@ def getCompleteURLs(url : str, name : str, version : int, rarity : str):
                 name + " (V-" + str(version) + ")"
             ]
             for version_str in version_strings:
-                possibleURLs.append(url + urlify(version_str))
+                possibleURLs.append(url + urlify(version_str) + get_parameters)
     else:
         for name in possibleNames:
-            possibleURLs.append(url + urlify(name))
+            possibleURLs.append(url + urlify(name) + get_parameters)
     fixedURLs = fixApostropheURLs(possibleURLs)
     return fixedURLs
 

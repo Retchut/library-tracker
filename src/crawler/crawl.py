@@ -4,7 +4,6 @@ from re import compile
 from typing import TextIO
 
 def getPrices(urls : list, logfile : TextIO) -> dict:
-
     prices = dict()
     for url in urls:
         response = requests.get(url)
