@@ -115,7 +115,7 @@ YSD,Starter-Deck-GX-2006
 YSDJ,Starter-Deck-Jaden-Yuki
 YSDS,Starter-Deck-Syrus-Truesdale
 YSD2,Starter-Deck-2007
-5DS1,5D-s-Starter-Deck-2008
+5DS1,Starter-Deck-YuGiOh-5Ds
 5DS2,Starter-Deck-2009
 5DS3,Starter-Deck-Duelist-Toolbox
 YS11,Starter-Deck-Dawn-of-the-Xyz
