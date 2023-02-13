@@ -101,6 +101,7 @@ BACH,Battle-of-Chaos
 DIFO,Dimension-Force
 POTE,Power-of-the-Elements
 DABL,Darkwing-Blast
+PHHY,Photon-Hypernova
 //
 //Starter Decks
 //Taken from https://yugioh.fandom.com/wiki/Starter_Deck
@@ -115,7 +116,7 @@ YSDJ,Starter-Deck-Jaden-Yuki
 YSDS,Starter-Deck-Syrus-Truesdale
 YSD2,Starter-Deck-2007
 5DS1,5D-s-Starter-Deck-2008
-5DS2,5D-s-Starter-Deck-2009
+5DS2,Starter-Deck-2009
 5DS3,Starter-Deck-Duelist-Toolbox
 YS11,Starter-Deck-Dawn-of-the-Xyz
 YS12,Starter-Deck-Xyz-Symphony
@@ -221,6 +222,7 @@ GEIM,Genesis-Impact
 ANGU,Ancient-Guardians
 GRCR,The-Grand-Creators
 TAMA,Tactical-Masters
+AMDE,Amazing-Defenders
 //
 //Collectors Packs / Collection Pack
 //OCG
@@ -347,6 +349,7 @@ TN19,2019-Gold-Sarcophagus-Tin
 MP19,2019-Gold-Sarcophagus-Tin-Mega-Pack
 MP20,2020-Tin-of-Lost-Memories-Mega-Pack
 MP21,2021-Tin-of-Ancient-Battles
+MP22,2022-Tin-of-the-Pharaohs-Gods
 //Premium Collection Tin
 PRC1,Premium-Collection
 //
@@ -393,6 +396,8 @@ OP16,OTS-Tournament-Pack-16
 OP17,OTS-Tournament-Pack-17
 OP18,OTS-Tournament-Pack-18
 OP19,OTS-Tournament-Pack-19
+OP20,OTS-Tournament-Pack-20
+OP21,OTS-Tournament-Pack-21
 //
 //Duel Terminals
 //Taken from: https://yugioh.fandom.com/wiki/Template:Duel_Terminals
@@ -430,7 +435,7 @@ PP02,Premium-Pack-2-Booster
 //Star Packs
 SP13,Star-Pack-2013
 SP14,Star-Pack-2014
-SP15,Star-Pack-Arc-V-Booster
+SP15,Star-Pack-ArcV
 SP17,Star-Pack-Battle-Royal
 SP18,Star-Pack-VRAINS
 //
@@ -453,6 +458,7 @@ EP1,Exclusive-Pack-1
 DUSA,Duelist-Saga
 DUPO,Duel-Power
 DUOV,Duel-Overload
+MAMA,Magnificent-Mavens
 //
 //60 card Sets
 PEVO,Pendulum-Evolution
