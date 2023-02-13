@@ -425,5 +425,17 @@ class URLTest(unittest.TestCase):
         self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
 
 
+    def testError9(self):
+        name = "Typhoon"
+        version = 1
+        rarity = "Common"
+        expansion = "BP03"
+        expected = "https://www.cardmarket.com/en/YuGiOh/Products/Singles/Battle-Pack-3-Monster-League/Typhoon-V-1"
+        expected += self.modifiers
+
+        returnedURLs = buildURLs(Card(name, version, rarity, expansion, self.condition, self.language, self.firstEd, self.amount, self.price), self.logfile)
+        self.assertTrue(expected in returnedURLs, self.getFailureString(expected, returnedURLs))
+
+
 if __name__ == "__main__":
     unittest.main()
